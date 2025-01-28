@@ -1,0 +1,25 @@
+- clonar
+
+- correr esto en el directorio de la app
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
+
+- Copiar  .env-example a .env  (.env es ignorado por git)
+
+- sail up -d
+
+- sail php artisan key:generate
+
+- sail php artisan migrate
+
+- sail npm install
+
+- sail npm run dev
+
+la app corre en localhost
+
+
