@@ -1,4 +1,4 @@
-- clonar
+﻿- clonar
 
 - correr esto en el directorio de la app
 docker run --rm \
@@ -9,6 +9,8 @@ docker run --rm \
     composer install --ignore-platform-reqs
 
 - Copiar  .env-example a .env  (.env es ignorado por git)
+
+-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 - sail up -d
 
